@@ -1,0 +1,117 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { background: #f0f4f0; color: #1a1a1a; overflow-x: hidden; }
+
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: #e8f0e8; }
+::-webkit-scrollbar-thumb { background: #2ea84a; border-radius: 3px; }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position:  200% center; }
+}
+@keyframes pulseRing {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(46,168,74,0.5); }
+  50%       { box-shadow: 0 0 0 10px rgba(46,168,74,0); }
+}
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-20px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+.animate-fade-up { animation: fadeUp 0.65s ease both; }
+.delay-1 { animation-delay: 0.1s; }
+.delay-2 { animation-delay: 0.2s; }
+.delay-3 { animation-delay: 0.3s; }
+.delay-4 { animation-delay: 0.4s; }
+.delay-5 { animation-delay: 0.5s; }
+
+.text-shimmer {
+  background: linear-gradient(90deg, #1a6e2e 0%, #2ea84a 35%, #5dd87a 55%, #2ea84a 75%, #1a6e2e 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 4s linear infinite;
+}
+
+.btn-primary {
+  display: inline-flex; align-items: center; gap: 10px;
+  background: linear-gradient(135deg, #2ea84a, #1a8a38);
+  color: #ffffff;
+  font-weight: 700; border-radius: 50px;
+  transition: transform 0.15s, box-shadow 0.2s;
+  animation: pulseRing 2.5s infinite;
+  text-decoration: none;
+  border: none; cursor: pointer;
+}
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(46,168,74,0.4); }
+
+.btn-ghost {
+  display: inline-flex; align-items: center; gap: 8px;
+  border: 2px solid rgba(46,168,74,0.4); color: #1a6e2e;
+  border-radius: 50px; text-decoration: none; background: white;
+  font-weight: 600;
+  transition: border-color 0.2s, background 0.2s, color 0.2s;
+}
+.btn-ghost:hover { border-color: #2ea84a; background: #2ea84a; color: white; }
+
+.btn-white {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: white; color: #1a6e2e;
+  border-radius: 50px; text-decoration: none;
+  font-weight: 700;
+  transition: transform 0.15s, box-shadow 0.2s;
+  border: none; cursor: pointer;
+}
+.btn-white:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(0,0,0,0.15); }
+
+.divider { height: 2px; background: linear-gradient(90deg, #2ea84a 0%, #56cfff 50%, transparent 100%); margin: 14px 0 20px; }
+
+.card {
+  background: white;
+  border: 1px solid rgba(46,168,74,0.12);
+  border-radius: 18px;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 40px rgba(46,168,74,0.12);
+}
+
+.gallery-img { transition: transform 0.45s cubic-bezier(.4,0,.2,1); }
+.gallery-wrap:hover .gallery-img { transform: scale(1.06); }
+
+.nav-link { position: relative; }
+.nav-link::after {
+  content: ''; position: absolute; bottom: -2px; left: 0;
+  width: 0; height: 2px; background: #2ea84a;
+  transition: width 0.25s;
+}
+.nav-link:hover::after { width: 100%; }
+
+/* Before/after slider */
+.ba-container { position: relative; overflow: hidden; border-radius: 16px; cursor: col-resize; user-select: none; }
+.ba-after { position: absolute; inset: 0; overflow: hidden; }
+.ba-handle { position: absolute; top: 0; bottom: 0; width: 3px; background: white; cursor: col-resize; transform: translateX(-50%); }
+.ba-handle-circle {
+  position: absolute; top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px; height: 40px; border-radius: 50%;
+  background: white; box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 14px; font-weight: 700; color: #2ea84a;
+}
+
+.section-dark { background: linear-gradient(135deg, #0d2b15 0%, #0a3d1f 50%, #0d2b15 100%); }
+.section-light { background: #f0f4f0; }
+.section-white { background: white; }
+.section-teal { background: linear-gradient(135deg, #0a2535 0%, #0d3a4f 100%); }
