@@ -18,6 +18,11 @@ export const metadata: Metadata = {
   title: 'CG Groundcare | Garden Maintenance, Landscaping & Winter Maintenance',
   description: 'Professional garden maintenance, landscaping and winter maintenance for domestic and commercial clients. Call Cameron on 07715 821193.',
   keywords: 'garden maintenance, landscaping, winter maintenance, grass cutting, hedge cutting, fencing, decking, CG Groundcare, Cameron Gill',
+  icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
+    apple: '/apple-touch-icon.png',
+  },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
