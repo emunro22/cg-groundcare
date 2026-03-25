@@ -1,11 +1,20 @@
+import Image from 'next/image'
+
 export default function Footer() {
   return (
     <footer style={{ background: '#0a1f0d', borderTop: '1px solid rgba(46,168,74,0.15)' }} className="py-10">
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-5">
           <div className="flex items-center gap-3">
-            <div className="w-9 h-9 rounded-full flex items-center justify-center text-white font-extrabold text-xs"
-              style={{ background: 'linear-gradient(135deg, #2ea84a, #56cfff)' }}>CG</div>
+            {/* Logo image instead of CG badge */}
+            <div className="relative w-10 h-10 flex-shrink-0">
+              <Image
+                src="/logo.png"
+                alt="CG Groundcare"
+                fill
+                className="object-contain"
+              />
+            </div>
             <div>
               <div className="font-display font-extrabold text-white">CG Groundcare</div>
               <div className="text-xs" style={{ color: '#56cfff' }}>camerongill09@outlook.com</div>

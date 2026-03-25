@@ -44,7 +44,7 @@ export default function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 pt-28 pb-20 w-full">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 pt-28 pb-32 sm:pb-20 w-full">
         <div className="max-w-lg">
 
           {/* Real logo */}
@@ -90,11 +90,11 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Scroll cue */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2">
-        <span className="text-[10px] text-green-600 uppercase tracking-widest">Scroll</span>
-        <div className="w-px h-8 bg-gradient-to-b from-green-400 to-transparent" />
-      </div>
-    </section>
+        {/* Scroll cue */}
+       <div className="absolute bottom-20 sm:bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2">
+          <span className="text-[10px] text-green-600 uppercase tracking-widest">Scroll</span>
+          <div className="w-px h-8 bg-gradient-to-b from-green-400 to-transparent" />
+        </div>   
+        </section>
   )
 }

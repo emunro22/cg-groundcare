@@ -1,6 +1,6 @@
 const services = [
   { icon: '🌿', title: 'Grounds Maintenance',  desc: 'Grass cutting, hedge trimming, edging, weeding and seasonal garden care for all property types.' },
-  { icon: '🏡', title: 'Landscaping',           desc: 'Full garden transformations — fencing, decking, artificial turf, block paving, gravel and planting.' },
+  { icon: '🏡', title: 'Landscaping',           desc: 'Full garden transformations — fencing, decking, artificial turf, gravel and planting.' },
   { icon: '❄️', title: 'Winter Maintenance',    desc: 'Gritting, snow clearance and de-icing to keep your property safe and accessible all winter long.' },
   { icon: '🏠', title: 'Domestic Work',         desc: 'Residential garden care tailored to homeowners — one-off tidy ups to regular maintenance contracts.' },
   { icon: '🏢', title: 'Commercial Work',       desc: 'Reliable scheduled maintenance for businesses, care homes, schools and commercial premises.' },
