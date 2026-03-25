@@ -6,6 +6,17 @@ const domestic = [
   { src: '/fence-new-1.png',         label: 'Close-Board Fencing',   desc: 'New full perimeter fence installed' },
   { src: '/fence-new-3.png',         label: 'Fencing',               desc: 'Curved fence line neatly installed' },
   { src: '/garden-after.png',        label: 'Garden Tidy Up',        desc: 'Overgrown garden cleared and shaped' },
+  { src: '/grass-cutting1.jpg',      label: 'Full Lawn Cut',        desc: 'A Recent Lawn Cut Job in the Area' },
+  { src: '/back-garden.jpg',         label: 'Full Garden Renovation',        desc: 'Complete Garden Renovation' },
+  { src: '/back-garden1.jpg',        label: 'Full Garden Renovation',        desc: 'Another Fully Complete Garden Renovation' },
+  { src: '/decking-2.jpg',           label: 'Decking Restoration',        desc: 'Fully Complete Decking Job' },
+  { src: '/decking-3.jpg',           label: 'Decking Restoration',        desc: 'Another Fully Complete Recent Decking Job' },
+  { src: '/front-garden.jpg',        label: 'Front Garden Restoration',        desc: 'Fully Complete Garden Restoration' },
+  { src: '/garden-makeover2.jpg',    label: 'Garden Makeover',        desc: 'A full Garden Makeover Recently Completed' },
+
+
+
+
 ]
 
 const commercial = [
@@ -13,6 +24,7 @@ const commercial = [
   { src: '/commercial-path.png',     label: 'Commercial Landscaping', desc: 'Tarmac path, lawn and planting for commercial site' },
   { src: '/hedge-after.png',         label: 'Commercial Hedges',     desc: 'Large leylandii hedge maintained to uniform height' },
   { src: '/fence-new-2.png',         label: 'Commercial Fencing',    desc: 'Long run of new close-board fencing' },
+  { src: '/commercial-fence.jpg',    label: 'Commercial Fencing',    desc: 'Another Long run of new close-board fencing' },
 ]
 
 function Grid({ items, dark }: { items: typeof domestic, dark?: boolean }) {
