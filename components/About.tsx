@@ -39,7 +39,7 @@ export default function About() {
             <div className="divider" />
             <div className="space-y-4 text-gray-600 text-base leading-relaxed">
               <p>
-                CG Groundcare is a locally run grounds maintenance and landscaping company serving both domestic and commercial clients across the area.
+                CG Groundcare is a locally run grounds maintenance and landscaping company serving both domestic and commercial clients across Scotlands Central Belt.
               </p>
               <p>
                 Whether it&apos;s a one-off garden tidy up, a full landscaping project, or year-round commercial grounds maintenance — we bring the same dedication to every job.

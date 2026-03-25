@@ -76,7 +76,7 @@ export default function Hero() {
           </h1>
 
           <p className="reveal opacity-0 text-green-100/80 text-lg leading-relaxed mb-10 max-w-md">
-            Professional garden maintenance, landscaping and winter maintenance for homes and businesses across the local area.
+            Professional garden maintenance, landscaping and winter maintenance for homes and businesses across the Scotlands Central Belt. This includes areas such as Newton Mearns, East end of Glasgow & Edinburgh
           </p>
 
           <div className="reveal opacity-0 flex flex-col sm:flex-row gap-4">

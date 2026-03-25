@@ -65,7 +65,7 @@ const pairs = [
     beforeLabel: 'Garden before makeover',
     afterLabel: 'Garden after makeover',
     title: 'Full Garden Makeover',
-    desc: 'Old lawn replaced with artificial turf, bark borders and decking added.',
+    desc: 'Old lawn removed and new lawn laid with decorative bark path.',
   },
   {
     before: '/hedge-before.png',

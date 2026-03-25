@@ -3,7 +3,6 @@ import Image from 'next/image'
 const domestic = [
   { src: '/lawn-stripe.png',         label: 'Lawn Mowing',           desc: 'Striped finish on large domestic lawn' },
   { src: '/astro-decking.png',       label: 'Artificial Turf & Decking', desc: 'Full garden transformation with astro and deck' },
-  { src: '/gravel-garden.png',       label: 'Gravel Garden',         desc: 'Low maintenance gravel finish with fencing' },
   { src: '/fence-new-1.png',         label: 'Close-Board Fencing',   desc: 'New full perimeter fence installed' },
   { src: '/fence-new-3.png',         label: 'Fencing',               desc: 'Curved fence line neatly installed' },
   { src: '/garden-after.png',        label: 'Garden Tidy Up',        desc: 'Overgrown garden cleared and shaped' },
