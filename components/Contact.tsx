@@ -5,7 +5,7 @@ const services = ['Grounds Maintenance', 'Landscaping', 'Winter Maintenance', 'F
 
 export default function Contact() {
   const [form, setForm] = useState({ name: '', phone: '', email: '', service: '', message: '' })
-  const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle')
+  const [status, setStatus] = useState<'idle' | 'sending' | 'error'>('idle')
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setForm((f) => ({ ...f, [e.target.name]: e.target.value }))
@@ -21,8 +21,8 @@ export default function Contact() {
         body: JSON.stringify(form),
       })
       if (!res.ok) throw new Error()
-      setStatus('success')
       setForm({ name: '', phone: '', email: '', service: '', message: '' })
+      window.location.href = '/thank-you'
     } catch {
       setStatus('error')
     }
@@ -58,60 +58,49 @@ export default function Contact() {
 
           {/* Form */}
           <div className="rounded-3xl p-8 md:p-10" style={{ background: 'white' }}>
-            {status === 'success' ? (
-              <div className="text-center py-10">
-                <div className="text-5xl mb-4">✅</div>
-                <h3 className="font-display text-2xl font-bold mb-2" style={{ color: '#0d2b15' }}>Message Sent!</h3>
-                <p className="text-gray-500">Cameron will be in touch shortly.</p>
-                <button onClick={() => setStatus('idle')} className="mt-6 text-sm hover:underline" style={{ color: '#2ea84a' }}>
-                  Send another message
-                </button>
+            <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+              <h3 className="font-display text-xl font-bold mb-1" style={{ color: '#0d2b15' }}>Send an Enquiry</h3>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div className="flex flex-col gap-1.5">
+                  <label className="text-xs font-bold uppercase tracking-wider" style={{ color: '#2ea84a' }}>Name *</label>
+                  <input name="name" value={form.name} onChange={handleChange} required placeholder="Your name" style={inputStyle} />
+                </div>
+                <div className="flex flex-col gap-1.5">
+                  <label className="text-xs font-bold uppercase tracking-wider" style={{ color: '#2ea84a' }}>Phone *</label>
+                  <input name="phone" value={form.phone} onChange={handleChange} required type="tel" placeholder="07700 000000" style={inputStyle} />
+                </div>
               </div>
-            ) : (
-              <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-                <h3 className="font-display text-xl font-bold mb-1" style={{ color: '#0d2b15' }}>Send an Enquiry</h3>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div className="flex flex-col gap-1.5">
-                    <label className="text-xs font-bold uppercase tracking-wider" style={{ color: '#2ea84a' }}>Name *</label>
-                    <input name="name" value={form.name} onChange={handleChange} required placeholder="Your name" style={inputStyle} />
-                  </div>
-                  <div className="flex flex-col gap-1.5">
-                    <label className="text-xs font-bold uppercase tracking-wider" style={{ color: '#2ea84a' }}>Phone *</label>
-                    <input name="phone" value={form.phone} onChange={handleChange} required type="tel" placeholder="07700 000000" style={inputStyle} />
-                  </div>
-                </div>
+              <div className="flex flex-col gap-1.5">
+                <label className="text-xs font-bold uppercase tracking-wider" style={{ color: '#2ea84a' }}>Email (optional)</label>
+                <input name="email" value={form.email} onChange={handleChange} type="email" placeholder="your@email.com" style={inputStyle} />
+              </div>
 
-                <div className="flex flex-col gap-1.5">
-                  <label className="text-xs font-bold uppercase tracking-wider" style={{ color: '#2ea84a' }}>Email (optional)</label>
-                  <input name="email" value={form.email} onChange={handleChange} type="email" placeholder="your@email.com" style={inputStyle} />
-                </div>
+              <div className="flex flex-col gap-1.5">
+                <label className="text-xs font-bold uppercase tracking-wider" style={{ color: '#2ea84a' }}>Service Required</label>
+                <select name="service" value={form.service} onChange={handleChange} style={{ ...inputStyle, appearance: 'none' as const }}>
+                  <option value="" disabled>Select a service...</option>
+                  {services.map((s) => <option key={s} value={s}>{s}</option>)}
+                </select>
+              </div>
 
-                <div className="flex flex-col gap-1.5">
-                  <label className="text-xs font-bold uppercase tracking-wider" style={{ color: '#2ea84a' }}>Service Required</label>
-                  <select name="service" value={form.service} onChange={handleChange} style={{ ...inputStyle, appearance: 'none' as const }}>
-                    <option value="" disabled>Select a service...</option>
-                    {services.map((s) => <option key={s} value={s}>{s}</option>)}
-                  </select>
-                </div>
+              <div className="flex flex-col gap-1.5">
+                <label className="text-xs font-bold uppercase tracking-wider" style={{ color: '#2ea84a' }}>Message (optional)</label>
+                <textarea name="message" value={form.message} onChange={handleChange} rows={4}
+                  placeholder="Tell us a bit about what you need..."
+                  style={{ ...inputStyle, resize: 'none' }} />
+              </div>
 
-                <div className="flex flex-col gap-1.5">
-                  <label className="text-xs font-bold uppercase tracking-wider" style={{ color: '#2ea84a' }}>Message (optional)</label>
-                  <textarea name="message" value={form.message} onChange={handleChange} rows={4}
-                    placeholder="Tell us a bit about what you need..."
-                    style={{ ...inputStyle, resize: 'none' }} />
-                </div>
+              {status === 'error' && (
+                <p className="text-red-500 text-sm">Something went wrong — please try calling us instead.</p>
+              )}
 
-                {status === 'error' && (
-                  <p className="text-red-500 text-sm">Something went wrong — please try calling us instead.</p>
-                )}
-
-                <button type="submit" disabled={status === 'sending'}
-                  className="btn-primary justify-center py-4 text-base font-bold mt-1 w-full disabled:opacity-60">
-                  {status === 'sending' ? '⏳ Sending...' : '📩 Send Enquiry'}
-                </button>
-              </form>
-            )}
+              <button type="submit" disabled={status === 'sending'}
+                className="btn-primary justify-center py-4 text-base font-bold mt-1 w-full disabled:opacity-60">
+                {status === 'sending' ? '⏳ Sending...' : '📩 Send Enquiry'}
+              </button>
+            </form>
           </div>
 
           {/* Right side */}
