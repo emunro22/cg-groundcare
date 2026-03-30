@@ -244,7 +244,7 @@ export async function POST(req: Request) {
           <td align="center" style="background:#f7fdf8;border-top:1px solid rgba(46,168,74,0.1);padding:20px 40px;">
             <p style="margin:0 0 4px;font-size:12px;color:#aaa;">CG Groundcare &middot; Glasgow &amp; surrounding areas</p>
             <p style="margin:0;font-size:12px;">
-              <a href="mailto:enquiries@cgg-roundcare.co.uk" style="color:#2ea84a;text-decoration:none;">enquiries@cg-groundcare.co.uk</a>
+              <a href="mailto:enquiries@cg-groundcare.co.uk" style="color:#2ea84a;text-decoration:none;">enquiries@cg-groundcare.co.uk</a>
             </p>
           </td>
         </tr>
