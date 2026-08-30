@@ -1,5 +1,7 @@
 import type { Metadata } from 'next'
 import { Playfair_Display, Outfit } from 'next/font/google'
+import CookieConsent from '@/components/CookieConsent'
+import Analytics from '@/components/Analytics'
 import './globals.css'
 
 const playfair = Playfair_Display({
@@ -62,15 +64,34 @@ const jsonLd = {
   },
 }
 
+const title = 'CG Groundcare | Garden Maintenance Glasgow & Edinburgh'
+const description = 'Professional garden maintenance, landscaping and winter maintenance for domestic and commercial clients. Call Cameron on 07715 821193.'
+
 export const metadata: Metadata = {
   metadataBase: new URL('https://cg-groundcare.co.uk'),
-  title: 'CG Groundcare | Garden Maintenance Glasgow & Edinburgh',
-  description: 'Professional garden maintenance, landscaping and winter maintenance for domestic and commercial clients. Call Cameron on 07715 821193.',
+  title,
+  description,
   keywords: 'garden maintenance, landscaping, winter maintenance, grass cutting, hedge cutting, fencing, decking, CG Groundcare, Cameron Gill',
+  alternates: { canonical: '/' },
   icons: {
     icon: '/favicon.ico',
     shortcut: '/favicon.ico',
     apple: '/apple-touch-icon.png',
+  },
+  openGraph: {
+    title,
+    description,
+    url: 'https://cg-groundcare.co.uk',
+    siteName: 'CG Groundcare',
+    images: [{ url: '/logo-card.png', width: 960, height: 960, alt: 'CG Groundcare' }],
+    locale: 'en_GB',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary',
+    title,
+    description,
+    images: ['/logo-card.png'],
   },
 }
 
@@ -83,6 +104,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
         {children}
+        <CookieConsent />
+        <Analytics />
       </body>
     </html>
   )

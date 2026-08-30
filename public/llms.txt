@@ -1,0 +1,28 @@
+# CG Groundcare
+
+> CG Groundcare (CGG Groundcare Limited) is a locally run grounds maintenance and landscaping
+> company based in Old Kilpatrick, Scotland, serving domestic and commercial clients across
+> Glasgow, Edinburgh, Newton Mearns and the surrounding Central Belt. Run by Cameron Gill.
+
+## Services
+
+- Grounds Maintenance — grass cutting, hedge trimming, edging, weeding, seasonal garden care: /services/grounds-maintenance
+- Landscaping — garden transformations, artificial grass, decorative gravel, bark, planting: /services/landscaping
+- Winter Maintenance — gritting, snow clearance, de-icing: /services/winter-maintenance
+- Fencing & Decking — fencing styles, treated timber decking, composite decking: /services/fencing-decking
+- Domestic Work — one-off tidy ups to regular maintenance contracts: /services/domestic
+- Commercial Work — scheduled contracts for businesses, care homes, schools: /services/commercial
+
+## Details
+
+- Areas served: Glasgow, Edinburgh, Newton Mearns, Old Kilpatrick, and the Central Belt of Scotland
+- Contact: 07715 821193, enquiries@cg-groundcare.co.uk
+- Free, no-obligation quotes for both domestic and commercial clients
+- Fully insured
+
+## Pages
+
+- Homepage: /
+- FAQ: /#faq
+- Privacy Policy: /privacy-policy
+- Terms & Conditions: /terms

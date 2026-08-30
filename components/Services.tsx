@@ -1,11 +1,5 @@
-const services = [
-  { icon: '🌿', title: 'Grounds Maintenance',  desc: 'Grass cutting, hedge trimming, edging, weeding and seasonal garden care for all property types.' },
-  { icon: '🏡', title: 'Landscaping',           desc: 'Full garden transformations - fencing, decking, composite decking, artificial grass, decorative gravel, bark, planting' },
-  { icon: '❄️', title: 'Winter Maintenance',    desc: 'Gritting, snow clearance and de-icing to keep your property safe and accessible all winter long.' },
-  { icon: '🏠', title: 'Domestic Work',         desc: 'Residential garden care tailored to homeowners — one-off tidy ups to regular maintenance contracts.' },
-  { icon: '🏢', title: 'Commercial Work',       desc: 'Reliable scheduled maintenance for businesses, care homes, schools and commercial premises.' },
-  { icon: '🪵', title: 'Fencing & Decking',     desc: 'Quality different styles of fencing, treated timber decking, composite decking' },
-]
+import Link from 'next/link'
+import { services } from '@/lib/services-data'
 
 export default function Services() {
   return (
@@ -25,15 +19,16 @@ export default function Services() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           {services.map((s) => (
-            <div key={s.title} className="card p-7">
+            <Link key={s.title} href={`/services/${s.slug}`} className="card p-7 block">
               <div className="w-12 h-12 rounded-xl flex items-center justify-center text-2xl mb-5"
                 style={{ background: 'linear-gradient(135deg, rgba(46,168,74,0.12), rgba(86,207,255,0.12))', border: '1px solid rgba(46,168,74,0.2)' }}>
                 {s.icon}
               </div>
               <h3 className="font-display text-lg font-bold mb-2" style={{ color: '#0d2b15' }}>{s.title}</h3>
-              <p className="text-gray-500 text-sm leading-relaxed">{s.desc}</p>
+              <p className="text-gray-500 text-sm leading-relaxed">{s.shortDesc}</p>
               <div className="mt-5 h-px" style={{ background: 'linear-gradient(90deg, rgba(46,168,74,0.3), transparent)' }} />
-            </div>
+              <span className="inline-block mt-4 text-sm font-semibold" style={{ color: '#2ea84a' }}>Learn more →</span>
+            </Link>
           ))}
         </div>
 

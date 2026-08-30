@@ -30,6 +30,10 @@ export default function Footer() {
           </a>
         </div>
         <div className="mt-8 mb-5 h-px" style={{ background: 'linear-gradient(90deg, #2ea84a, #56cfff, transparent)' }} />
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-x-5 gap-y-2 mb-4">
+          <a href="/privacy-policy" className="text-xs hover:text-green-300 transition-colors" style={{ color: '#2d5e38' }}>Privacy Policy</a>
+          <a href="/terms" className="text-xs hover:text-green-300 transition-colors" style={{ color: '#2d5e38' }}>Terms &amp; Conditions</a>
+        </div>
         <p className="text-center text-xs" style={{ color: '#2d5e38' }}>
           © {new Date().getFullYear()} CG Groundcare. All rights reserved. Professional Garden Maintenance &amp; Landscaping.
         </p>
