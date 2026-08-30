@@ -2,11 +2,11 @@
 import { useEffect, useState } from 'react'
 
 export default function CookieConsent() {
-  const [visible, setVisible] = useState(false)
+  const [visible, setVisible] = useState(true)
 
   useEffect(() => {
     const stored = localStorage.getItem('cookie-consent')
-    if (!stored) setVisible(true)
+    if (stored) setVisible(false)
   }, [])
 
   const choose = (value: 'accepted' | 'declined') => {

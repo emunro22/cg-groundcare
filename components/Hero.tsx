@@ -28,7 +28,7 @@ export default function Hero() {
       {/* Van image */}
       <div className="absolute right-0 top-0 bottom-0 w-full lg:w-[60%] overflow-hidden">
         <Image
-          src="/van2.png"
+          src="/van2.webp"
           alt="CG Groundcare van"
           fill
           className="object-cover object-center"

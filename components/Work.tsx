@@ -1,18 +1,18 @@
 import Image from 'next/image'
 
 const domestic = [
-  { src: '/lawn-stripe.png',         label: 'Lawn Mowing',           desc: 'Striped finish on large domestic lawn' },
-  { src: '/astro-decking.png',       label: 'Artificial Turf & Decking', desc: 'Full garden transformation with astro and deck' },
-  { src: '/fence-new-1.png',         label: 'Close-Board Fencing',   desc: 'New full perimeter fence installed' },
-  { src: '/fence-new-3.png',         label: 'Fencing',               desc: 'Curved fence line neatly installed' },
-  { src: '/garden-after.png',        label: 'Garden Tidy Up',        desc: 'Overgrown garden cleared and shaped' },
-  { src: '/grass-cutting1.jpg',      label: 'Full Lawn Cut',        desc: 'A Recent Lawn Cut Job in the Area' },
-  { src: '/back-garden.jpg',         label: 'Full Garden Renovation',        desc: 'Complete Garden Renovation' },
-  { src: '/back-garden1.jpg',        label: 'Full Garden Renovation',        desc: 'Another Fully Complete Garden Renovation' },
-  { src: '/decking-2.jpg',           label: 'Decking Restoration',        desc: 'Fully Complete Decking Job' },
-  { src: '/decking-3.jpg',           label: 'Decking Restoration',        desc: 'Another Fully Complete Recent Decking Job' },
-  { src: '/front-garden.jpg',        label: 'Front Garden Restoration',        desc: 'Fully Complete Garden Restoration' },
-  { src: '/garden-makeover2.jpg',    label: 'Garden Makeover',        desc: 'A full Garden Makeover Recently Completed' },
+  { src: '/lawn-stripe.webp',         label: 'Lawn Mowing',           desc: 'Striped finish on large domestic lawn' },
+  { src: '/astro-decking.webp',       label: 'Artificial Turf & Decking', desc: 'Full garden transformation with astro and deck' },
+  { src: '/fence-new-1.webp',         label: 'Close-Board Fencing',   desc: 'New full perimeter fence installed' },
+  { src: '/fence-new-3.webp',         label: 'Fencing',               desc: 'Curved fence line neatly installed' },
+  { src: '/garden-after.webp',        label: 'Garden Tidy Up',        desc: 'Overgrown garden cleared and shaped' },
+  { src: '/grass-cutting1.webp',      label: 'Full Lawn Cut',        desc: 'A Recent Lawn Cut Job in the Area' },
+  { src: '/back-garden.webp',         label: 'Full Garden Renovation',        desc: 'Complete Garden Renovation' },
+  { src: '/back-garden1.webp',        label: 'Full Garden Renovation',        desc: 'Another Fully Complete Garden Renovation' },
+  { src: '/decking-2.webp',           label: 'Decking Restoration',        desc: 'Fully Complete Decking Job' },
+  { src: '/decking-3.webp',           label: 'Decking Restoration',        desc: 'Another Fully Complete Recent Decking Job' },
+  { src: '/front-garden.webp',        label: 'Front Garden Restoration',        desc: 'Fully Complete Garden Restoration' },
+  { src: '/garden-makeover2.webp',    label: 'Garden Makeover',        desc: 'A full Garden Makeover Recently Completed' },
 
 
 
@@ -20,11 +20,11 @@ const domestic = [
 ]
 
 const commercial = [
-  { src: '/commercial-lawn.png',     label: 'Care Home Grounds',     desc: 'Manicured grounds at local care home' },
-  { src: '/commercial-path.png',     label: 'Commercial Landscaping', desc: 'Tarmac path, lawn and planting for commercial site' },
-  { src: '/hedge-after.png',         label: 'Commercial Hedges',     desc: 'Large leylandii hedge maintained to uniform height' },
-  { src: '/fence-new-2.png',         label: 'Commercial Fencing',    desc: 'Long run of new close-board fencing' },
-  { src: '/commercial-fence.jpg',    label: 'Commercial Fencing',    desc: 'Another Long run of new close-board fencing' },
+  { src: '/commercial-lawn.webp',     label: 'Care Home Grounds',     desc: 'Manicured grounds at local care home' },
+  { src: '/commercial-path.webp',     label: 'Commercial Landscaping', desc: 'Tarmac path, lawn and planting for commercial site' },
+  { src: '/hedge-after.webp',         label: 'Commercial Hedges',     desc: 'Large leylandii hedge maintained to uniform height' },
+  { src: '/fence-new-2.webp',         label: 'Commercial Fencing',    desc: 'Long run of new close-board fencing' },
+  { src: '/commercial-fence.webp',    label: 'Commercial Fencing',    desc: 'Another Long run of new close-board fencing' },
 ]
 
 function Grid({ items, dark }: { items: typeof domestic, dark?: boolean }) {

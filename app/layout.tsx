@@ -16,9 +16,26 @@ const outfit = Outfit({
   display: 'swap',
 })
 
+const address = {
+  '@type': 'PostalAddress',
+  streetAddress: 'Flat 2, 29 Freelands Crescent',
+  addressLocality: 'Old Kilpatrick',
+  postalCode: 'G60 5DZ',
+  addressCountry: 'GB',
+}
+
+const areaServed = [
+  { '@type': 'City', name: 'Newton Mearns' },
+  { '@type': 'City', name: 'Glasgow' },
+  { '@type': 'City', name: 'Edinburgh' },
+]
+
+// Kept as a single-string @type (rather than an array) plus additionalType,
+// since some schema scanners only match a plain string on @type.
 const jsonLd = {
   '@context': 'https://schema.org',
-  '@type': ['LocalBusiness', 'HomeAndConstructionBusiness'],
+  '@type': 'LocalBusiness',
+  additionalType: 'https://schema.org/HomeAndConstructionBusiness',
   name: 'CGG Groundcare Limited',
   alternateName: 'CG Groundcare',
   legalName: 'CGG Groundcare Limited',
@@ -28,18 +45,8 @@ const jsonLd = {
   telephone: '+447715821193',
   email: 'enquiries@cg-groundcare.co.uk',
   priceRange: '££',
-  address: {
-    '@type': 'PostalAddress',
-    streetAddress: 'Flat 2, 29 Freelands Crescent',
-    addressLocality: 'Old Kilpatrick',
-    postalCode: 'G60 5DZ',
-    addressCountry: 'GB',
-  },
-  areaServed: [
-    { '@type': 'City', name: 'Newton Mearns' },
-    { '@type': 'City', name: 'Glasgow' },
-    { '@type': 'City', name: 'Edinburgh' },
-  ],
+  address,
+  areaServed,
   founder: {
     '@type': 'Person',
     name: 'Cameron Gill',
@@ -61,6 +68,23 @@ const jsonLd = {
         itemOffered: { '@type': 'Service', name: 'Winter Maintenance' },
       },
     ],
+  },
+}
+
+const organizationJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'CGG Groundcare Limited',
+  alternateName: 'CG Groundcare',
+  url: 'https://cg-groundcare.co.uk',
+  logo: 'https://cg-groundcare.co.uk/logo.png',
+  address,
+  contactPoint: {
+    '@type': 'ContactPoint',
+    telephone: '+447715821193',
+    email: 'enquiries@cg-groundcare.co.uk',
+    contactType: 'customer service',
+    areaServed: 'GB',
   },
 }
 
@@ -102,6 +126,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
         />
         {children}
         <CookieConsent />

@@ -10,14 +10,14 @@ export default function About() {
           <div className="relative">
             <div className="grid grid-cols-2 gap-3">
               <div className="relative rounded-2xl overflow-hidden" style={{ aspectRatio: '3/4' }}>
-                <Image src="/commercial-path.png" alt="Commercial landscaping" fill className="object-cover" />
+                <Image src="/commercial-path.webp" alt="Commercial landscaping" fill className="object-cover" />
               </div>
               <div className="flex flex-col gap-3 pt-8">
                 <div className="relative rounded-2xl overflow-hidden" style={{ aspectRatio: '1/1' }}>
-                  <Image src="/lawn-stripe.png" alt="Lawn mowing" fill className="object-cover" />
+                  <Image src="/lawn-stripe.webp" alt="Lawn mowing" fill className="object-cover" />
                 </div>
                 <div className="relative rounded-2xl overflow-hidden" style={{ aspectRatio: '1/1' }}>
-                  <Image src="/astro-decking.png" alt="Decking" fill className="object-cover" />
+                  <Image src="/astro-decking.webp" alt="Decking" fill className="object-cover" />
                 </div>
               </div>
             </div>

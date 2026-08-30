@@ -52,24 +52,24 @@ function BASlider({ before, after, beforeLabel, afterLabel }: {
 
 const pairs = [
   {
-    before: '/garden-before.png',
-    after: '/garden-after.png',
+    before: '/garden-before.webp',
+    after: '/garden-after.webp',
     beforeLabel: 'Overgrown garden before',
     afterLabel: 'Garden tidied after',
     title: 'Garden Clearance',
     desc: 'Completely overgrown front garden cleared, hedges shaped and tidied.',
   },
   {
-    before: '/garden-makeover-before.png',
-    after: '/garden-makeover-after.png',
+    before: '/garden-makeover-before.webp',
+    after: '/garden-makeover-after.webp',
     beforeLabel: 'Garden before makeover',
     afterLabel: 'Garden after makeover',
     title: 'Full Garden Makeover',
     desc: 'Old lawn removed and new lawn laid with decorative bark path.',
   },
   {
-    before: '/hedge-before.png',
-    after: '/hedge-after.png',
+    before: '/hedge-before.webp',
+    after: '/hedge-after.webp',
     beforeLabel: 'Hedge before cutting',
     afterLabel: 'Hedge after cutting',
     title: 'Hedge Cutting',
