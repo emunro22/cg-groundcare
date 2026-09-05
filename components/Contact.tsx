@@ -93,7 +93,7 @@ export default function Contact() {
               </div>
 
               {status === 'error' && (
-                <p className="text-red-500 text-sm">Something went wrong — please try calling us instead.</p>
+                <p className="text-red-500 text-sm">Something went wrong. Please try calling us instead.</p>
               )}
 
               <button type="submit" disabled={status === 'sending'}

@@ -31,6 +31,7 @@ export default function Footer() {
         </div>
         <div className="mt-8 mb-5 h-px" style={{ background: 'linear-gradient(90deg, #2ea84a, #56cfff, transparent)' }} />
         <div className="flex flex-col sm:flex-row items-center justify-center gap-x-5 gap-y-2 mb-4">
+          <a href="/blog" className="text-xs hover:text-green-300 transition-colors" style={{ color: '#2d5e38' }}>Blog</a>
           <a href="/privacy-policy" className="text-xs hover:text-green-300 transition-colors" style={{ color: '#2d5e38' }}>Privacy Policy</a>
           <a href="/terms" className="text-xs hover:text-green-300 transition-colors" style={{ color: '#2d5e38' }}>Terms &amp; Conditions</a>
         </div>

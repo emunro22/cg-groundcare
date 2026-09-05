@@ -54,7 +54,7 @@ export default function PrivacyPolicy() {
                 Contact form submissions are sent via Resend, our email delivery provider, so that we receive your
                 enquiry and can send you a confirmation email. The site is hosted on Vercel. If analytics is
                 enabled on this site, we use it only after you accept cookies (see our cookie banner) to understand
-                how visitors use the site — never to identify you personally.
+                how visitors use the site, never to identify you personally.
               </p>
             </div>
 

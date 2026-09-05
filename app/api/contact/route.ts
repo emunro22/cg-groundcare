@@ -15,7 +15,7 @@ export async function POST(req: Request) {
     await resend.emails.send({
       from: 'CG Groundcare <enquiries@cg-groundcare.co.uk>',
       to: process.env.CONTACT_EMAIL ?? 'camerongill09@outlook.com',
-      subject: `🌿 New Enquiry from ${name}${service ? ` — ${service}` : ''}`,
+      subject: `🌿 New Enquiry from ${name}${service ? ` (${service})` : ''}`,
       html: `
 <!DOCTYPE html>
 <html lang="en">
@@ -117,7 +117,7 @@ export async function POST(req: Request) {
             <table width="100%" cellpadding="0" cellspacing="0" border="0">
               <tr>
                 <td align="center" style="background:linear-gradient(135deg,#0d2b15,#0a3d1f);border-radius:14px;padding:24px;">
-                  <p style="margin:0 0 14px;color:rgba(255,255,255,0.7);font-size:14px;">Don't keep them waiting — give <strong style="color:#5dd87a;">${name}</strong> a call back!</p>
+                  <p style="margin:0 0 14px;color:rgba(255,255,255,0.7);font-size:14px;">Don't keep them waiting: give <strong style="color:#5dd87a;">${name}</strong> a call back!</p>
                   <a href="tel:${phone}" style="display:inline-block;background:linear-gradient(135deg,#2ea84a,#1a8a38);color:white;text-decoration:none;font-size:15px;font-weight:700;padding:13px 32px;border-radius:50px;">📞 Call ${phone}</a>
                 </td>
               </tr>
@@ -219,7 +219,7 @@ export async function POST(req: Request) {
                   <div style="width:26px;height:26px;background:#2ea84a;border-radius:50%;text-align:center;line-height:26px;color:white;font-size:13px;font-weight:700;">3</div>
                 </td>
                 <td style="padding-left:12px;">
-                  <p style="margin:0;color:#444;font-size:14px;line-height:1.6;">We get to work — leaving your grounds looking their best.</p>
+                  <p style="margin:0;color:#444;font-size:14px;line-height:1.6;">We get to work, leaving your grounds looking their best.</p>
                 </td>
               </tr>
             </table>

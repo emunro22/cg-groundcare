@@ -13,6 +13,7 @@ export default function Navbar() {
   }, [])
 
   const links = ['Services', 'Work', 'About', 'Contact']
+  const blogHref = '/blog'
 
   return (
     <nav
@@ -28,7 +29,7 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
 
-        {/* Logo — href goes to homepage, Image src points to /logo.png in public folder */}
+        {/* Logo: href goes to homepage, Image src points to /logo.png in public folder */}
         <a href="#" className="flex items-center gap-3 group">
           <div className="relative w-12 h-12 flex-shrink-0">
             <Image
@@ -52,6 +53,10 @@ export default function Navbar() {
               {l}
             </a>
           ))}
+          <a href={blogHref}
+            className="nav-link text-sm font-medium text-green-100 hover:text-white transition-colors">
+            Blog
+          </a>
           <a href="tel:07715821193" className="btn-primary text-sm px-5 py-2.5">
             📞 07715 821193
           </a>
@@ -86,6 +91,12 @@ export default function Navbar() {
               {l}
             </a>
           ))}
+          <a href={blogHref}
+            className="text-green-100 hover:text-green-400 transition-colors text-sm font-medium"
+            style={{ padding: '13px 0', borderBottom: '1px solid rgba(255,255,255,0.06)', display: 'block' }}
+            onClick={() => setOpen(false)}>
+            Blog
+          </a>
           <a href="tel:07715821193" className="btn-primary justify-center mt-3"
             style={{ padding: '13px 0' }} onClick={() => setOpen(false)}>
             📞 07715 821193

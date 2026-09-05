@@ -58,7 +58,7 @@ export default function Terms() {
               <p>
                 This website and its content are provided for general information about CG Groundcare&apos;s
                 services. While we try to keep information accurate and up to date, availability, pricing and
-                service areas may change without notice — please contact us to confirm current details.
+                service areas may change without notice, so please contact us to confirm current details.
               </p>
             </div>
 

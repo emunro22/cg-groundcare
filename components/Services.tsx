@@ -13,7 +13,7 @@ export default function Services() {
           </h2>
           <div className="divider" />
           <p className="text-gray-600 text-base leading-relaxed">
-            From a single lawn cut to a full commercial grounds contract — we cover it all.
+            From a single lawn cut to a full commercial grounds contract, we cover it all.
           </p>
         </div>
 
@@ -36,7 +36,7 @@ export default function Services() {
         <div className="mt-14 rounded-3xl p-10 md:p-14 text-center text-white"
           style={{ background: 'linear-gradient(135deg, #0d2b15 0%, #0a3d1f 60%, #0a2535 100%)' }}>
           <h3 className="font-display text-3xl md:text-4xl font-extrabold mb-3">Need a free quote?</h3>
-          <p className="text-green-200 mb-8 text-lg">Domestic or commercial — we&apos;ll come out and assess your needs.</p>
+          <p className="text-green-200 mb-8 text-lg">Domestic or commercial: we&apos;ll come out and assess your needs.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="tel:07715821193" className="btn-primary text-lg px-9 py-4">📞 07715 821193</a>
             <a href="mailto:camerongill09@outlook.com" className="btn-white text-lg px-9 py-4">✉️ Email Cameron</a>

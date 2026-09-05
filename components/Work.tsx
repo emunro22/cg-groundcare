@@ -86,7 +86,7 @@ export default function Work() {
           </div>
           <div className="divider mb-8" />
           <p className="text-green-200/70 text-base mb-10 max-w-xl">
-            We work with care homes, businesses and commercial landlords across the area — providing reliable, scheduled maintenance year-round.
+            We work with care homes, businesses and commercial landlords across the area, providing reliable, scheduled maintenance year-round.
           </p>
           <Grid items={commercial} dark />
         </div>

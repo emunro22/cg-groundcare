@@ -8,7 +8,7 @@ const faqs = [
   },
   {
     q: 'Do you offer free quotes?',
-    a: 'Yes — every quote is free and no-obligation. Call or fill in the contact form and we\'ll arrange a time to assess the work.',
+    a: 'Yes, every quote is free and no-obligation. Call or fill in the contact form and we\'ll arrange a time to assess the work.',
   },
   {
     q: 'Are you insured?',
@@ -16,7 +16,7 @@ const faqs = [
   },
   {
     q: 'Do you work with both homeowners and businesses?',
-    a: 'Yes — we take on one-off domestic tidy ups through to regular commercial contracts for businesses, care homes and schools.',
+    a: 'Yes, we take on one-off domestic tidy ups through to regular commercial contracts for businesses, care homes and schools.',
   },
   {
     q: 'Do you provide winter maintenance and gritting?',
